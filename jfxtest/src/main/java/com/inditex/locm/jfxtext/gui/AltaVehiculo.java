@@ -3,7 +3,8 @@ package com.inditex.locm.jfxtext.gui;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.inditex.jfxtext.model.persistence.dao.MockDao;
-import com.inditex.jfxtext.model.util.Constantes;
+import com.inditex.jfxtext.service.interfaces.TipoVehiculoService;
+import com.inditex.jfxtext.util.Constantes;
 import com.inditex.locm.jfxtext.model.MessageModel;
 
 import javafx.collections.FXCollections;
@@ -21,8 +22,8 @@ public class AltaVehiculo extends Modal {
         super(config);
     }
 
-    @Autowired
-    private MessageModel model;
+    @Autowired(required = false)
+    private TipoVehiculoService tipoVehiculoService;
 
     @FXML
     ChoiceBox cmbTipoVehiculo;
@@ -35,7 +36,6 @@ public class AltaVehiculo extends Modal {
     
     @FXML
     void initialize() {
-//        messageTf.setText(model.getMessage());
     	loadCmbTpVh();
     }
 
@@ -59,7 +59,7 @@ public class AltaVehiculo extends Modal {
     }
 
     private void loadCmbTpVh(){
-        ObservableList obList = FXCollections.observableList(MockDao.getTiposVehiculo());
+        ObservableList obList = FXCollections.observableList(tipoVehiculoService.getTiposVehiculos());
         cmbTipoVehiculo.setItems(obList);
     }
 }

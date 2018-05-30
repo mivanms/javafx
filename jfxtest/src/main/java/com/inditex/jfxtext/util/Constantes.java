@@ -1,4 +1,4 @@
-package com.inditex.jfxtext.model.util;
+package com.inditex.jfxtext.util;
 
 public class Constantes {
 

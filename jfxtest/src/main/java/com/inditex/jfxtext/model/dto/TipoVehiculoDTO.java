@@ -30,6 +30,6 @@ public class TipoVehiculoDTO {
 	
 	@Override
 	public String toString() {
-		return "TipoVehiculoDTO [id=" + id + ", descripcion=" + descripcion + "]";
+		return  descripcion ;
 	}
 }
