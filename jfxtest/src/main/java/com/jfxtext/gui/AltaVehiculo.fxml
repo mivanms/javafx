@@ -49,14 +49,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField id="marticula" fx:id="matricula" onKeyPressed="#validateMatricula" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <TextArea id="descripcion" prefHeight="83.0" prefWidth="158.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <ChoiceBox id="idTipo" fx:id="cmbTipoVehiculo" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TextField fx:id="matricula" onKeyPressed="#validateMatricula" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <TextArea fx:id="descripcion" prefHeight="83.0" prefWidth="158.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <ChoiceBox fx:id="cmbTipoVehiculo" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <Button id="cancelar" fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelarAltaVehiculo" prefHeight="25.0" prefWidth="119.0" text="Cancelar" GridPane.columnIndex="3" GridPane.rowIndex="7" />
       <Button id="crear" fx:id="btnCrear" mnemonicParsing="false" onAction="#crearVehiculo" prefHeight="25.0" prefWidth="119.0" text="Crear" GridPane.columnIndex="2" GridPane.rowIndex="7" />
       <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
          <image>
-            <Image url="/jfxtest/images/close.png" />
+            <Image url="@../../../../../../images/close.png" />
          </image>
          <GridPane.margin>
             <Insets left="4.0" top="4.0" />
@@ -64,7 +64,7 @@
       </ImageView>
       <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
          <image>
-            <Image url="/jfxtest/images/tick_green.png" />
+            <Image url="@../../../../../../images/tick_green.png" />
          </image>
          <GridPane.margin>
             <Insets left="4.0" top="4.0" />
