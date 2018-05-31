@@ -46,7 +46,10 @@ public class AltaVehiculo extends Modal {
 
     @FXML
     void crearVehiculo(ActionEvent event) {
-//        model.setMessage(messageTf.getText());
+//        model.setMessage(messageTf.getText()); 
+    	System.out.println(cmbTipoVehiculo);
+    	System.out.println(descripcion);
+    	System.out.println(matricula);
     }
     
     @FXML
