@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Import;
 import com.jfxtext.gui.ScreensConfig;
 import com.jfxtext.model.LanguageModel;
 import com.jfxtext.model.MessageModel;
+import com.jfxtext.model.mapper.TipoVehiculoMapper;
 import com.jfxtext.model.persistence.dao.TipoVehiculoDao;
 import com.jfxtext.service.impl.TipoVehiculoServiceImpl;
 import com.jfxtext.service.interfaces.TipoVehiculoService;
@@ -39,5 +40,10 @@ public class AppConfig {
     @Bean
     TipoVehiculoDao tipoVehiculoDao() {
         return new TipoVehiculoDao();
+    }
+    
+    @Bean
+    TipoVehiculoMapper tipoVehiculoMapper() {
+        return new TipoVehiculoMapper();
     }
 }

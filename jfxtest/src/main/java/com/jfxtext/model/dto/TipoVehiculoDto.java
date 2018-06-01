@@ -1,22 +1,20 @@
-package com.jfxtext.model.persistence.entities;
-
-import java.io.Serializable;
+package com.jfxtext.model.dto;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@Entity
-@Table(name = "TIPOVEHICULO")
-@Data @NoArgsConstructor
-public class TipoVehiculo implements Serializable{
+
+@EqualsAndHashCode @Getter  @Setter  @RequiredArgsConstructor @NoArgsConstructor
+public class TipoVehiculoDto{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID") 
@@ -24,4 +22,9 @@ public class TipoVehiculo implements Serializable{
 	@Column(name = "TIPO")
 	private @NonNull String tipo;
 	
+	
+	@Override
+	public String toString() {
+		return tipo ;
+	}
 }

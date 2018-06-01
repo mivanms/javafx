@@ -2,7 +2,7 @@ package com.jfxtext.gui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jfxtext.model.dto.TipoVehiculoDTO;
+import com.jfxtext.model.dto.TipoVehiculoDto;
 import com.jfxtext.service.interfaces.TipoVehiculoService;
 import com.jfxtext.util.Constantes;
 
@@ -28,7 +28,7 @@ public class AltaVehiculo extends Modal {
     ChoiceBox cmbTipoVehiculo;
     
     @FXML
-    TextArea descripcion;
+    TextArea tipo;
 
     @FXML
     TextField matricula;
@@ -46,9 +46,9 @@ public class AltaVehiculo extends Modal {
     @FXML
     void crearVehiculo(ActionEvent event) {
 //        model.setMessage(messageTf.getText()); 
-    	System.out.println(((TipoVehiculoDTO)cmbTipoVehiculo.getSelectionModel().getSelectedItem()).getId());
-    	System.out.println(descripcion);
-    	System.out.println(matricula);
+    	System.out.println(((TipoVehiculoDto)cmbTipoVehiculo.getSelectionModel().getSelectedItem()).getId());
+    	System.out.println(tipo.getText());
+    	System.out.println(matricula.getText());
     	 dialog.close();
     }
     

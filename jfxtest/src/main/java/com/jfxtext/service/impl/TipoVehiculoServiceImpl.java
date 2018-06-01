@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jfxtext.model.dto.TipoVehiculoDTO;
-import com.jfxtext.model.parser.Parser;
+import com.jfxtext.model.dto.TipoVehiculoDto;
+import com.jfxtext.model.mapper.TipoVehiculoMapper;
 import com.jfxtext.model.persistence.dao.TipoVehiculoDao;
 import com.jfxtext.service.interfaces.TipoVehiculoService;
 
@@ -18,8 +18,11 @@ public class TipoVehiculoServiceImpl implements TipoVehiculoService {
 	@Autowired(required = false)
 	private TipoVehiculoDao tipoVehiculoDao;
 	
-	public List<TipoVehiculoDTO> getTiposVehiculos() {
-		return Parser.getTiposVehiculo(tipoVehiculoDao.listaTipos());
+	@Autowired(required = false)
+	TipoVehiculoMapper tipoVehiculoMapper;
+	
+	public List<TipoVehiculoDto> getTiposVehiculos() {
+		return tipoVehiculoMapper.toDto(tipoVehiculoDao.listaTipos());
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jfxtext.model.dto.TipoVehiculoDTO;
+import com.jfxtext.model.dto.TipoVehiculoDto;
 
 public interface TipoVehiculoService {
     /**
@@ -13,5 +13,5 @@ public interface TipoVehiculoService {
      *
      * @return lista proveedores externos para lugar entrega
      */
-    List<TipoVehiculoDTO> getTiposVehiculos();
+    List<TipoVehiculoDto> getTiposVehiculos();
 }
